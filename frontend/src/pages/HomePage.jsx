@@ -10,7 +10,7 @@ const HomePage = () => {
   const [userProfile, setUserProfile] = useState(null);
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [sortType, setSortType] = useState("forks");
+  const [sortType, setSortType] = useState("recents");
 
   const getUserProfileAndRepos = useCallback(async (username="ashiii1") => {
     setLoading(true);
@@ -25,6 +25,7 @@ const HomePage = () => {
 
       const repoRes = await fetch(userProfile.repos_url);
       const repos = await repoRes.json();
+      repos.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
       setRepos(repos);      
 
       return {userProfile,repos}
@@ -49,7 +50,8 @@ const HomePage = () => {
 
    setUserProfile(userProfile);
    setRepos(repos)
-   setLoading(false)
+   setLoading(false);
+   setSortType("recent")
   }
   const onSort = (sortType) => {
 		if (sortType === "recent") {
