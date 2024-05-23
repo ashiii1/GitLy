@@ -9,11 +9,17 @@ const ExplorePage = () => {
 	const [repos, setRepos] = useState([]);
 	const [selectedLanguage, setSelectedLanguage] = useState("");
 
+
+	const apiUrl = import.meta.env.VITE_GITHUB_API_URL;
+
+	
+	
+
 	const exploreRepos = async (language) => {
 		setLoading(true);
 		setRepos([]);
 		try {
-			const res = await fetch(`https://api.github.com/search/repositories?q=language:${language}&sort=stars&order=desc&per_page=10`,{
+			const res = await fetch(`${apiUrl}?q=language:${language}&sort=stars&order=desc&per_page=10`,{
 				headers:{
 					Authorization: `token ${import.meta.env.VITE_GITHUB_API_KEY}`,
 				}
