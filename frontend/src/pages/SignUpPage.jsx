@@ -1,3 +1,4 @@
+import React from "react";
 import { FaGithub, FaUnlockAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -7,9 +8,9 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0'>
-      <div className='w-full rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0 bg-glass'>
-        <div className='p-6 spacey-y-4 md:space-y-6 sm:p-8'>
+    <div className='flex flex-col items-center justify-center min-h-screen'>
+      <div className='w-full max-w-md rounded-lg shadow-md bg-glass'>
+        <div className='p-6 space-y-4'>
           <h1 className='text-xl font-bold md:text-2xl text-center'>Create Account</h1>
 
           <button

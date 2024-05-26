@@ -1,12 +1,11 @@
-// routes/logoutRoutes.js
-
 const express = require('express');
 const router = express.Router();
 
 router.post('/', (req, res) => {
-  // Handle logout logic here
-  // For example, clear session data or revoke tokens
-  // Redirect to the login page or send a success response
+  // Clear session, token, or perform any necessary logout operation
+  // Example: req.session.destroy() for session-based authentication
+
+  // Respond with a success message
   res.json({ message: 'Logout successful' });
 });
 
