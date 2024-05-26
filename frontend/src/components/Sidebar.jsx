@@ -6,19 +6,13 @@ import { MdOutlineExplore } from "react-icons/md";
 import { PiSignInBold } from "react-icons/pi";
 import { MdEditDocument } from "react-icons/md";
 import Logout from "./Logout";
-
 const Sidebar = () => {
   const authUser = true;
   const location = useLocation();
-
-  // Determine if the sidebar should be hidden based on the current route
   const shouldHideSidebar = location.pathname === '/signup' || location.pathname === '/login';
-
-  // Render sidebar only if user is authenticated and not on signup or login page
   if (!authUser || shouldHideSidebar) {
     return null;
   }
-
   return (
     <aside
       className='flex flex-col items-center min-w-12 sm:w-16 sticky top-0 left-0 h-screen py-8
@@ -28,7 +22,6 @@ const Sidebar = () => {
         <Link to='/' className='flex justify-center'>
           <img className='h-8' src='/github.svg' alt='Github Logo' />
         </Link>
-
         <Link
           to='/'
           className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg 
@@ -36,21 +29,18 @@ const Sidebar = () => {
         >
           <IoHomeSharp size={20} />
         </Link>
-
         <Link
           to='/likes'
           className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg hover:bg-gray-800'
         >
           <FaHeart size={22} />
         </Link>
-
         <Link
           to='/explore'
           className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg hover:bg-gray-800'
         >
           <MdOutlineExplore size={25} />
         </Link>
-
         <div className='flex flex-col gap-2 mt-auto'>
           <Logout />
         </div>
@@ -58,5 +48,4 @@ const Sidebar = () => {
     </aside>
   );
 };
-
 export default Sidebar;
