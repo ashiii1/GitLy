@@ -10,7 +10,7 @@ const HomePage = () => {
   const [userProfile, setUserProfile] = useState(null);
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [sortType, setSortType] = useState("recents");
+  const [sortType, setSortType] = useState("recent");
 
   const getUserProfileAndRepos = useCallback(async (username="ashiii1") => {
     setLoading(true);
