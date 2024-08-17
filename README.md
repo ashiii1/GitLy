@@ -20,7 +20,7 @@ Most Recent
 Most Starred
 Most Forked
 
-![Gi](https://github.com/ashiii1/GitLy/blob/master/frontend/public/ss-git/Screenshot%20from%202024-06-19%2017-04-08.png)
+![Screenshot 2024-08-17 214946](https://github.com/user-attachments/assets/c94c2ba7-4b97-4dc7-934d-f4dd3e8fe337)
 
 
 Explore Feature
