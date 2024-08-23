@@ -39,7 +39,7 @@ import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   const handleGithubLogin = () => {
-    window.location.href = 'http://localhost:5000/auth/github';
+    window.location.href = 'https://gitly-ocua.onrender.com/auth/github';
   };
 
   return (
