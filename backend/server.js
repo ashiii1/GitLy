@@ -7,7 +7,7 @@ app.use(cors());
 const CLIENT_ID = process.env.GITHUB_CLIENT_ID;
 const CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
 app.get('/auth/github', (req, res) => {
-  const redirect_uri = 'https://git-ly.vercel.app/api/auth/github/callback';
+  const redirect_uri = 'https://gitly-ocua.onrender.com/api/auth/github/callback';
   res.redirect(`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${redirect_uri}`);
 });
 app.get('/api/auth/github/callback', async (req, res) => {
