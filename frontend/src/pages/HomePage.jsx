@@ -5,7 +5,6 @@ import Repos from "../components/Repos";
 import ProfileInfo from '../components/ProfileInfo'
 import { useCallback, useEffect, useState } from "react";
 import Spinner from '../components/Spinner'
-import Sidebar from "../components/Sidebar";
 
 const HomePage = () => {
   const [userProfile, setUserProfile] = useState(null);
@@ -67,8 +66,6 @@ const HomePage = () => {
 	};
 
   return (
-    <div className="flex">
-      <Sidebar className="flex-shrink-0 w-64" /> {/* Set fixed width for Sidebar */}
       <main className="flex-1 p-4 ml-4"> {/* Add margin to the left */}
         <Search onSearch={onSearch} />
         {repos.length > 0 && <SortRepos onSort={onSort} sortType={sortType} />}
@@ -78,7 +75,6 @@ const HomePage = () => {
           {loading && <Spinner />}
         </div>
       </main>
-    </div>
   );
 };
 
