@@ -1,7 +1,5 @@
 GitLy
 
-Introduction
-
 Welcome to GitLy! GitLy is a powerful tool designed to enhance your GitHub experience by providing a comprehensive way to search and explore GitHub users and their repositories. With GitLy, you can easily access user profiles, bios, social links, and repositories, along with advanced filtering options to find exactly what you need.
 
 ![Gi](https://github.com/ashiii1/GitLy/blob/master/frontend/public/ss-git/Screenshot%20from%202024-06-19%2017-03-48.png)
